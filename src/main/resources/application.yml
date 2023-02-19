@@ -1,1 +1,24 @@
+server:
+  port: 8080
 
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost/spring_data_jpa?characterEncoding=utf8
+    username: root
+    password: root
+    hikari:
+      maximum-pool-size: 5
+
+  jpa:
+    open-in-view: false
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+
+logging:
+  level:
+    org:
+    hibernate:
+    sql: DEBUG
