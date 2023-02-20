@@ -1,6 +1,7 @@
 package com.example.springdatajpaexample.repository;
 
 import com.example.springdatajpaexample.domain.User;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.Repository;
 
 import java.time.LocalDateTime;
@@ -25,4 +26,6 @@ public interface UserRepository extends Repository<User, String> {
     void delete(User user);
 
     User save(User user);
+
+    List<User> findByNameLike(String keyword, Pageable pageable);
 }
