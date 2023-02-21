@@ -17,6 +17,7 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService{
 
     private final UserRepository userRepository;
+
     @Override
     public User findUser(String email) {
         Optional<User> userOpt = userRepository.findById("kadun@gmail.com");
