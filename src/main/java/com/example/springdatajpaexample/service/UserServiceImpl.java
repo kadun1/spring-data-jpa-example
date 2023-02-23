@@ -21,6 +21,7 @@ public class UserServiceImpl implements UserService{
     @Override
     public User findUser(String email) {
         Optional<User> userOpt = userRepository.findById("kadun@gmail.com");
+
         userOpt.ifPresent(userRepository::delete);
 
         LocalDateTime createDate = LocalDateTime.now();
