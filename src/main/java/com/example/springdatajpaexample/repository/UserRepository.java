@@ -28,4 +28,6 @@ public interface UserRepository extends Repository<User, String> {
     User save(User user);
 
     List<User> findByNameLike(String keyword, Pageable pageable);
+
+    User findAllByCreateDate();
 }
