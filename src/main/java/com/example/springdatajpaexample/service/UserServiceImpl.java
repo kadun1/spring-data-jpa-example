@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService{
 
         LocalDateTime createDate = LocalDateTime.now();
 
-        User savedUser = userRepository.save(new User(createDate,"kadun@gmail.com", "희나리"));
+        User savedUser = userRepository.save(new User("kadun@gmail.com", "희나리", createDate));
 
         // page는 0부터 시작
         // 한 페이지에 10개 기준으로 두 번째 페이지 조회
